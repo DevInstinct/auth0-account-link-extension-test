@@ -6,6 +6,7 @@ with an existing registered with the same email address from a different provide
 > **NOTE:** Please make sure you are using your own social connections (Google, Facebook, etc...) API keys. Using Auth0's keys will result on an 'Unauthorized' error on account linking skip.
 
 ## Example:
+
 - You signed up with FooApp with your email, `greatname@example.com`.
 - You come back some time later and forget whether you signed in with your email or Google account with the same email address.
 - You try to use your Google account
@@ -39,9 +40,10 @@ yarn run serve:dev
 
 ## Running puppeteer tests
 
-In order to run the tests you'll have to [start the extension server locally](https://github.com/auth0-extensions/auth0-account-link-extension#running-in-development), fill the `config.test.json` file (normally with the same data as the `config.json` file) and run the Sample Test application located in `sample-app/` (create a dedicated client for this app).
+In order to run the tests you'll have to [start the extension server locally](https://github.com/auth0-extensions/auth0-account-link-extension-test#running-in-development), fill the `config.test.json` file (normally with the same data as the `config.json` file) and run the Sample Test application located in `sample-app/` (create a dedicated client for this app).
 
 Then, you can run the tests running:
+
 ```bash
 yarn test
 ```
@@ -63,5 +65,4 @@ yarn run build
 Bundle file (`auth0-account-link.extension.VERSION.js` is found in `/dist`
 Asset CSS files are found in `/dist/assets`
 
-Follow the instructions in the deployment tool.  This tool will also automatically generate a PR in the `auth0-extensions` repo.  Only after the PR is merged will the extension be available in production.  Before merging the PR you can use this tool to test the upgrade: https://github.com/auth0-extensions/auth0-extension-update-tester by overriding the `extensions.json` file that is fetched by the dashboard.  You will need to clone this repo: https://github.com/auth0/auth0-extensions, update `extensions.json` locally and then run `npx http-server --port 3000 --cors` to serve up the file.  Then configure the extension with `http://localhost:3000/extensions.json` as the path.
-
+Follow the instructions in the deployment tool. This tool will also automatically generate a PR in the `auth0-extensions` repo. Only after the PR is merged will the extension be available in production. Before merging the PR you can use this tool to test the upgrade: https://github.com/auth0-extensions/auth0-extension-update-tester by overriding the `extensions.json` file that is fetched by the dashboard. You will need to clone this repo: https://github.com/auth0/auth0-extensions, update `extensions.json` locally and then run `npx http-server --port 3000 --cors` to serve up the file. Then configure the extension with `http://localhost:3000/extensions.json` as the path.
